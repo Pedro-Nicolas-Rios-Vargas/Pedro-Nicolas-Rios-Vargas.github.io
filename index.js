@@ -2,21 +2,51 @@ const form = document.getElementById('formulario');
 const main = document.getElementsByTagName('main')[0];
 const tableHead = document.getElementsByTagName('thead')[0];
 const tableBody = document.getElementsByTagName('tbody')[0];
+const resultsContainer = document.getElementById('results-container');
+const resultSpan = document.getElementById('result');
 
-// const reglas = [];
-// let metodo = '';
-// let bh = [];
-// let meta = '';
+
+function doResultContainerVisible() {
+  if (resultsContainer.classList.contains('invisible')) {
+    resultsContainer.classList.remove('invisible');
+  }
+}
 
 function abortoDeTags(tagName) {
   const tag = document.getElementsByTagName(tagName)[0];
 
   if (tag.hasChildNodes()) {
     const childrens = Array.from(tag.childNodes);
-    for (children of childrens) {
+    for (let children of childrens) {
       tag.removeChild(children);
     }
   }
+}
+
+function showResultMessage(success) {
+  let message = '';
+  let tagClass = '';
+  if (success) {
+    message = 'Exito';
+    tagClass = 'exito';
+  } else {
+    message = 'Fracaso';
+    tagClass = 'fracaso';
+  }
+  if (resultSpan.classList.contains('fracaso')) {
+    if (tagClass != 'fracaso') {
+      resultSpan.classList.remove('fracaso');
+      resultSpan.classList.add(tagClass);
+    }
+  } else if (resultSpan.classList.contains('exito')) {
+    if (tagClass != 'exito') {
+      resultSpan.classList.remove('exito');
+      resultSpan.classList.add(tagClass);
+    }
+  } else {
+    resultSpan.classList.add(tagClass);
+  }
+  resultSpan.textContent = message;
 }
 
 function buildTableRow(cc, nuevo, meta, r, bh, header=false) {
@@ -120,6 +150,7 @@ class Encadenamientos {
     this.meta = meta;
     this.cc = [];
     this.r = '';
+    doResultContainerVisible();
   }
 
   equipar() {
@@ -184,6 +215,7 @@ class Encadenamientos {
       }
       buildBodyTable(this.cc, nh, this.meta, this.r, this.bh);
     }
+    showResultMessage(this.bh.includes(this.meta));
     if (this.bh.includes(this.meta)) {
       console.log('Exito');
     } else {
@@ -253,6 +285,7 @@ class Encadenamientos {
 
     buildTableHeader();
     let resultado = verificar(this.meta);
+    showResultMessage(resultado);
     if (resultado) {
       console.log('Exito');
     } else {

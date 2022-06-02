@@ -11,7 +11,7 @@ html {
 
 main {
   font-size: 1.6rem;
-  width: 100vw;
+  width: 100%;
   display: inline-block;
   padding: 0.5rem;
 }
@@ -24,6 +24,30 @@ section {
 
 .section-table {
   padding-top: 1rem;
+}
+
+.section-table {
+  display: block;
+  width: 100%;
+}
+
+.section-table__container {
+  display: flex;
+  justify-content: center;
+}
+
+.exito {
+  color: #137800;
+  font-weight: bold;
+}
+
+.fracaso {
+  color: #780000;
+  font-weight: bold;
+}
+
+.invisible {
+  display: none;
 }
 
 form {
