@@ -1,0 +1,101 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  font-size: 1.6rem;
+  width: 100vw;
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section-table {
+  padding-top: 1rem;
+}
+
+form {
+  font-size: 1.6rem;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  padding: 0.5rem;
+}
+
+label {
+  width: 100%;
+}
+
+label p {
+  padding-top: 0.3rem;
+}
+
+label input, textarea {
+  width: 100%;
+}
+
+fieldset {
+  padding: 0.5rem;
+}
+
+fieldset legend {
+  background-color: #000;
+  color: #FFF;
+  padding: 3px 6px;
+  margin-left: 20%;
+}
+
+#form-submit-btn {
+  padding: 0.5rem 1rem;
+  color: #FFF;
+  background-color: #900;
+  border: 2px solid #611;
+}
+
+table {
+  width: 90%;
+  height: 100px;
+  overflow-x: auto;
+  border-spacing: 0;
+  border: 1px solid;
+  border-right-width: 0;
+  border-bottom-width: 0;
+}
+
+thead {
+  width: 100%;
+}
+
+tbody {
+  width: 100%;
+  white-space: nowrap;
+}
+
+th {
+  font-weight: bold;
+  border: 1px solid;
+  border-top-width: 0;
+  border-left-width: 0;
+  background-color: #137800;
+}
+
+td {
+  border: 1px solid;
+  padding: 0.5rem 1rem;
+  border-top-width: 0;
+  border-left-width: 0;
+  text-align: center;
+}

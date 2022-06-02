@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Encadenamientos</title>
+  <meta name="viewport" content="width=device-width, initia-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  
+</head>
+<body>
+  <main>
+    <section class="section-form">
+      <form action="#" id="formulario">
+        <fieldset>
+          <legend>Método a utilizar</legend>
+          <div>
+            <input type="radio" id="adelante" name="metodo" value="adelante" checked/>
+            <label for="">Encadenamiento hacia adelante</label>
+          </div>
+          <div>
+            <input type="radio" id="atras" name="metodo" value="atras"/>
+            <label for="atras">Encadenamiento hacia atrás</label>
+          </div>
+        </fieldset>
+        <label>
+          <p>Base de hechos (BH):</p>
+          <input type="text" name="BH" value="A, B, C, ..." required />
+        </label>
+        <label>
+          <p>Meta:</p>
+          <input type="text" name="Meta" value="Z" required />
+        </label>
+        <label for="">
+          <p>Conjunto de reglas:</p>
+          <textarea name="BC", rows="10" cols="50">Ingrese las reglas:</textarea>
+        </label>
+        <input id="form-submit-btn" type="submit" value="Enviar" />
+      </form>
+    </section>
+    <section class="section-table">
+      <table>
+        <thead>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+    
+  </main>
+  
+  <script src="./index.js"></script>
+</body>
+</html>
